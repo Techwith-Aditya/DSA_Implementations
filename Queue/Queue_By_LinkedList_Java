@@ -1,0 +1,79 @@
+class Node {
+    int data;
+    Node next;
+    Node (int data) {
+        this.data=data;
+        this.next=null;
+    }
+}
+
+public class queueByLL{
+    private Node start=null;
+    private Node end=null;
+    int size=0;
+
+    public void insert(int x) {
+        Node temp=new Node(x);
+        if(start==null)
+        {
+            start=temp;
+            end=temp;
+        }
+        else
+        {
+            end.next=temp;
+            end=temp;
+        }
+        System.out.println("Pushed data is: "+x);
+        size++;
+    }
+
+    public void delete() {
+        int deleted=-1;
+        if(start==null)
+        {
+            throw new IllegalStateException("Queue is empty! Cannot delete.");
+        }
+        else if(start==end)
+        {
+            deleted=start.data;
+            start=null;
+            end=null;
+        }
+        else
+        {
+            deleted=start.data;
+            start=start.next;
+        }
+        System.out.println("Deleted data is: "+deleted);
+        size--;
+    }
+
+    public int top() {
+        if(start==null)
+        {
+            return -1;
+        }
+        else
+        {
+            return start.data;
+        }
+    }
+
+    public static void main(String[] args) {
+        queueByLL q=new queueByLL();
+        q.insert(10);
+        System.out.println("size has been: "+q.size); // here i did only +size...but needed to do q.size; because The error arises because size is a non-static field, but you are trying to access it directly in a static context (likely the main method). To resolve this issue, you need to access the size field via an instance of the class it belongs to.
+        q.insert(20);
+        System.out.println("size has been: "+q.size);
+        q.insert(30);
+        System.out.println("size has been: "+q.size);
+        q.delete();
+        System.out.println("size has been: "+q.size);
+        System.out.println("For now top element in queue is: "+q.top());
+        q.delete();
+        q.delete();
+        System.out.println("size has been: "+q.size); // size became 0 here...
+        q.delete(); // shows custom exception provided above...
+    }
+}

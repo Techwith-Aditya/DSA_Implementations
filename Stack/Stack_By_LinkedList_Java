@@ -1,0 +1,73 @@
+// Pet thing to do:
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class stackUsingLL {
+    private Node top=null;
+    private int size=0;
+
+    public void push(int x) {
+        Node temp = new Node(x);
+        temp.next = top;
+        top = temp;
+        size++;
+        System.out.println(x + " pushed onto the stack.\n");
+    }
+
+    public void pop() {
+        if (isEmpty()) 
+        {
+            System.out.println("Stack is empty. Cannot perform pop operation.\n");
+            return;
+        }
+        int poppedValue = top.data;
+        top = top.next;
+        size--;
+        System.out.println(poppedValue + " popped from the stack.\n");
+    }
+
+    public int peek() {
+        if (isEmpty()) 
+        {
+            System.out.println("Stack is empty. Nothing to peek.\n");
+            return -1; 
+        }
+        return top.data;
+    }
+
+    public boolean isEmpty() {
+        return top == null;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public static void main(String[] args) {
+        stackUsingLL stack = new stackUsingLL();
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        System.out.println("Top element is: " + stack.peek());
+        System.out.println("Stack size is: " + stack.getSize());
+        System.out.println("\n");
+
+        stack.pop();
+        stack.pop();
+
+        System.out.println("Top element after popping is: " + stack.peek());
+        System.out.println("\n");
+        System.out.println("Stack size after popping is: " + stack.getSize());
+        System.out.println("\n");
+    
+    }
+}

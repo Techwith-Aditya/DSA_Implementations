@@ -56,4 +56,9 @@ To contribute, create a pull request with the details of your changes.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/DSA_Implementations.git
+   git clone https://github.com/Techwith-Aditya/DSA_Implementations.git
+
+2. Navigate to the project directory:
+   '''bash
+   cd DSA_Implementations
+

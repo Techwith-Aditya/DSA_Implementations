@@ -1,0 +1,80 @@
+#include <stdio.h>
+#define Max 5
+
+int stack[Max];
+int top = -1;
+
+void push(int data) {
+    if (top == Max - 1) 
+    {
+        printf("Stack Overflow\n");
+    } 
+    else 
+    {
+        top = top + 1;
+        stack[top] = data;
+    }
+}
+
+int pop() {
+    if (top == -1) 
+    {
+        printf("Stack Underflow\n");
+        return -1;
+    } 
+    else 
+    {
+        int data = stack[top];
+        top = top - 1;
+        return data;
+    }
+}
+
+void display() {
+    if (top == -1) 
+    {
+        printf("Stack is empty\n");
+    } 
+    else 
+    {
+        printf("Stack (top first):\n");
+        for (int i = top; i >= 0; i--) 
+        {
+            printf("%d\n", stack[i]);
+        }
+    }
+}
+
+int main() {
+    int ch, d, c;
+    do {
+        printf("1 -> PUSH\n2 -> POP\n3 -> DISPLAY\n");
+        printf("Enter your choice: ");
+        scanf("%d", &ch);
+
+        switch (ch) 
+        {
+        case 1:
+            printf("Enter data: ");
+            scanf("%d", &d);
+            push(d);
+            break;
+
+        case 2:
+            d = pop();
+            if (d != -1) 
+            {
+                printf("Deleted data: %d\n", d);
+            }
+            break;
+
+        case 3:
+            display();
+            break;
+        }
+
+        printf("Want to continue? (1 for Yes / 0 for No): ");
+        scanf("%d", &c);
+    } while (c == 1);
+    return 0;
+}

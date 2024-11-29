@@ -44,11 +44,15 @@ This folder provides implementations of queues using arrays, linked lists, and s
 
 Feel free to contribute by:
 
-1. Adding new implementations.
-2. Improving existing code and documentation.
-3. Suggesting solutions to DSA problems.
-
-To contribute, create a pull request with the details of your changes.
+1. Fork this repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git clone https://github.com/Techwith-Aditya/DSA_Implementations.git
+3. Commit your changes and push the branch:
+   ```bash
+   git commit -m "Description of changes"
+   git push origin feature-name
+4. Open a pull request with a detailed description of your changes:
 
 ---
 
@@ -58,7 +62,9 @@ To contribute, create a pull request with the details of your changes.
    ```bash
    git clone https://github.com/Techwith-Aditya/DSA_Implementations.git
 
-2. Navigate to the project directory:
-   '''bash
+2. Clone the repository:
+   ```bash
    cd DSA_Implementations
+   
+3. Run the programs: Open any file in your favorite IDE or text editor to execute and experiment with the implementations.
 

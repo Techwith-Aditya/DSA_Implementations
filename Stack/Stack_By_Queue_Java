@@ -1,0 +1,51 @@
+import java.util.*;
+public class stackUsingQueue {
+    Queue<Integer> q=new LinkedList<>();
+    int size=0;
+
+    public void push(int x) {
+        q.add(x);
+        size++;
+        for(int i=0; i<size-1; i++)
+        {
+            q.add(q.remove());
+            
+        }
+        System.out.println("Added element in stack is: "+q.peek());
+    }
+
+    public void pop() {
+        if(q.isEmpty())
+        {
+            System.out.println("No elements to pop");
+            return;
+        }
+        int deleted=q.remove();
+        System.out.println("Deleted element is: "+deleted);
+        size--;
+    }
+
+    public int top() {
+        if(q.isEmpty())
+        {
+            System.out.println("No elements to pop");
+            return -1;
+        }
+        return q.peek();
+    }
+
+    public static void main(String[] args) {
+        stackUsingQueue s=new stackUsingQueue();
+        s.push(10);
+        System.out.println("current size is: "+s.size);
+        s.push(20);
+        System.out.println("current size is: "+s.size);
+        s.push(30);
+        System.out.println("current size is: "+s.size);
+ 
+        s.pop();
+        System.out.println("current size is: "+s.size);
+        System.out.println("Top element is: "+s.top());
+    }
+}
+

@@ -1,0 +1,35 @@
+import java.util.Stack;
+public class prefix_To_Infix {
+    public static boolean isOperand(char ch) {
+        return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9');
+    }
+
+    public static String convertPrefixToInfix(String string) {
+        char ch;
+        Stack<String> s = new Stack<>();
+        
+        for(int i=string.length()-1; i>=0; i--) 
+        {
+            ch = string.charAt(i);
+            if(isOperand(ch)) 
+            {
+                s.push(String.valueOf(ch));
+            } 
+            else
+            {
+                String top1 = s.pop();
+                String top2 = s.pop();
+                String convertedString = "(" + top1 + ch + top2 + ")"; // minor change made from Postfix to Infix logic. There we did (top2 + ch + top1), but here we are doing (top1 + ch + top2)...
+                s.push(convertedString);
+            }
+        }
+        return s.peek();
+    }
+
+    public static void main(String[] args) {
+        String prefix = "*+AB-CD";
+        String infix = convertPrefixToInfix(prefix);
+        System.out.println("Prefix: " + prefix);
+        System.out.println("Infix: " + infix);
+    }
+}

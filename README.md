@@ -23,12 +23,12 @@ The project is organized into folders for better readability and navigation:
 ### **1. Stack**
 This folder contains implementations of stacks using different methods and data structures. It also includes solutions to stack-related problems.
 
-- **`Stack_By_Array.java`**: Implements stack using an array.
-- **`Stack_By_LinkedList_Java.java`**: Implements stack using a linked list.
-- **`Stack_By_Queue_Java.java`**: Implements stack using queues.
-- **`Infix_To_Postfix`**: Converts Infix expressions into Postfix expressions.
-- **`Infix_To_Prefix`**: Converts Infix expressions into Prefix expressions.
-- **`Longest_Valid_Paranthesis_Java.java`**: Solves the problem of finding the longest valid parentheses using stacks.
+- **`Stack_By_Array_Java`**: Implements stack using an array.
+- **`Stack_By_LinkedList_Java`**: Implements stack using a linked list.
+- **`Stack_By_Queue_Java`**: Implements stack using queues.
+- **`Infix_To_Postfix_Java`**: Converts Infix expressions into Postfix expressions.
+- **`Infix_To_Prefix_Java`**: Converts Infix expressions into Prefix expressions.
+- **`Longest_Valid_Paranthesis_Java`**: Solves the problem of finding the longest valid parentheses using stacks.
 
 ---
 

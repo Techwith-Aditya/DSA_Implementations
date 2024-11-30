@@ -26,6 +26,8 @@ This folder contains implementations of stacks using different methods and data 
 - **`Stack_By_Array.java`**: Implements stack using an array.
 - **`Stack_By_LinkedList_Java.java`**: Implements stack using a linked list.
 - **`Stack_By_Queue_Java.java`**: Implements stack using queues.
+- **`Infix_To_Postfix`**: Converts Infix expressions into Postfix expressions.
+- **`Infix_To_Prefix`**: Converts Infix expressions into Prefix expressions.
 - **`Longest_Valid_Paranthesis_Java.java`**: Solves the problem of finding the longest valid parentheses using stacks.
 
 ---

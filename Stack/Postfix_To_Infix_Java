@@ -1,0 +1,35 @@
+import java.util.Stack;
+public class postfix_To_Infix {
+    public static boolean isOperand(char ch) {
+        return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9');
+    }
+
+    public static String convertPostfixToInfix(String string) {
+        char ch;
+        Stack<String> s = new Stack<>();
+        
+        for(int i=0; i<string.length(); i++) 
+        {
+            ch = string.charAt(i);
+            if(isOperand(ch)) 
+            {
+                s.push(String.valueOf(ch));
+            } 
+            else
+            {
+                String top1 = s.pop();
+                String top2 = s.pop();
+                String convertedString = "(" + top2 + ch + top1 + ")";
+                s.push(convertedString);
+            }
+        }
+        return s.peek();
+    }
+
+    public static void main(String[] args) {
+        String postfix = "AB-DE+F*/";
+        String infix = convertPostfixToInfix(postfix);
+        System.out.println("Postfix: " + postfix);
+        System.out.println("Infix: " + infix);
+    }
+}

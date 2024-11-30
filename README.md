@@ -4,7 +4,7 @@ Welcome to the **DSA Implementations** repository! This repository is designed t
 
 ## 🚀 Features
 
-- **Well-structured code** for essential data structures like **Stack** and **Queue**.
+- **Well-structured code** for essential data structures.
 - Solutions to **commonly asked problems** on platforms such as LeetCode, GeeksforGeeks, and Codeforces.
 - **Beginner-friendly explanations** for better understanding of key concepts.
 - Ready-to-use implementations for **interview preparation**.
@@ -31,7 +31,7 @@ This folder contains implementations of stacks using different methods and data 
 ---
 
 ### **2. Queue**
-This folder provides implementations of queues using arrays, linked lists, and stacks.
+This folder provides implementations of queues using arrays, linked lists, and stacks. Also, it includes solutions of frequently asked problems of Queue.
 
 - **`CircularQueue_By_Array.java`**: Implements a circular queue using an array.
 - **`Queue_By_Array.java`**: Implements a basic queue using an array.

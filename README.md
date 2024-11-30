@@ -29,6 +29,7 @@ This folder contains implementations of stacks using different methods and data 
 - **`Infix_To_Postfix_Java`**: Converts Infix expressions into Postfix expressions.
 - **`Infix_To_Prefix_Java`**: Converts Infix expressions into Prefix expressions.
 - **`Postfix_To_Infix_Java`**: Converts Postfix expressions into Infix expressions.
+- **`Prefix_To_Infix_Java`**: Converts Prefix expressions into Infix expressions.
 - **`Longest_Valid_Paranthesis_Java`**: Solves the problem of finding the longest valid parentheses using stacks.
 
 ---

@@ -44,6 +44,11 @@ This folder provides implementations of queues using arrays, linked lists, and s
 
 ---
 
+### **3. Linked_List**
+This folder contains solutions to frequently asked linked list problems from LeetCode and GFG.
+
+---
+
 ## 🤝 Contributing
 
 Feel free to contribute by:

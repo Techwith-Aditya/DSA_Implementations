@@ -1,0 +1,63 @@
+// _____________Solution 1______________
+// class Solution {
+//     public Node removeDuplicates(Node head) {
+//         if (head == null) 
+//         {
+//             return null;
+//         }
+
+//         Node current = head;
+
+//         // Iterate through each node
+//         while (current != null) 
+//         {
+//             Node temp = current;
+
+//             // Compare current node with the rest of the list
+//             while (temp.next != null) 
+//             {
+//                 if (temp.next.data == current.data) 
+//                 {
+//                     temp.next = temp.next.next;
+//                 } 
+//                 else 
+//                 {
+//                     temp = temp.next;
+//                 }
+//             }
+
+//             current = current.next;
+//         }
+//         return head;
+//     }
+// }
+
+// _____________Solution 2______________
+
+class Solution {
+    public Node removeDuplicates(Node head) {
+        if (head == null) 
+        {
+            return null;
+        }
+
+        HashSet<Integer> visited = new HashSet<>();
+        Node temp = head;
+        visited.add(temp.data);
+        
+        while (temp.next != null) 
+        {
+            if (visited.contains(temp.next.data)) 
+            {
+                temp.next = temp.next.next;
+            } 
+            else 
+            {
+                visited.add(temp.next.data); 
+                temp = temp.next; 
+            }
+        }
+        return head;
+    }
+}
+

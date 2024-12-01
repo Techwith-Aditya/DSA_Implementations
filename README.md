@@ -47,6 +47,12 @@ This folder provides implementations of queues using arrays, linked lists, and s
 ### **3. Linked_List**
 This folder contains solutions to frequently asked linked list problems from LeetCode and GFG.
 
+- **`Delete_without_head_pointer_Java`**
+- **`Linked_List_Cycle_Java`**
+- **`Merge_Two _Sorted _Lists_Java`**
+- **`Remove_Duplicates_From_An_Unsorted_Linked_List_Java`**
+- **`Reverse_Linked_List_Java`**
+
 ---
 
 ## 🤝 Contributing

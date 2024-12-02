@@ -30,7 +30,9 @@ This folder contains implementations of stacks using different methods and data 
 - **`Infix_To_Prefix_Java`**: Converts Infix expressions into Prefix expressions.
 - **`Postfix_To_Infix_Java`**: Converts Postfix expressions into Infix expressions.
 - **`Prefix_To_Infix_Java`**: Converts Prefix expressions into Infix expressions.
-- **`Longest_Valid_Paranthesis_Java`**: Solves the problem of finding the longest valid parentheses using stacks.
+- **`Longest_Valid_Paranthesis_Java`**
+- **`Evaluation_of_Postfix_Expression_Java`**
+- **`Two_Stacks_in_an_Array_Java`**
 
 ---
 
@@ -52,7 +54,8 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Merge_Two _Sorted _Lists_Java`**
 - **`Remove_Duplicates_From_An_Unsorted_Linked_List_Java`**
 - **`Reverse_Linked_List_Java`**
-
+- **`Multiply_two_linked_lists_Java`**
+- **`Sort_a_linked_list_of_0s_1s_and_2s_Java`**
 ---
 
 ## 🤝 Contributing

@@ -1,0 +1,107 @@
+class Solution {
+    static Node segregate(Node head) {
+        Node zeroHead = new Node(-1);
+        Node oneHead = new Node(-1);
+        Node twoHead = new Node(-1);
+
+        Node zeroTail = zeroHead;
+        Node oneTail = oneHead;
+        Node twoTail = twoHead;
+
+        Node curr = head;
+
+        while (curr != null) 
+        {
+            if (curr.data == 0) 
+            {
+                zeroTail = insertAtTail(zeroTail, curr);
+            } 
+            else if (curr.data == 1) 
+            {
+                oneTail = insertAtTail(oneTail, curr);
+            } 
+            else if (curr.data == 2) 
+            {
+                twoTail = insertAtTail(twoTail, curr);
+            }
+            curr = curr.next;
+        }
+
+        if (oneHead.next != null) 
+        {
+            zeroTail.next = oneHead.next;
+        } 
+        else 
+        {
+            zeroTail.next = twoHead.next;
+        }
+
+        oneTail.next = twoHead.next;
+        twoTail.next = null;
+
+        head = zeroHead.next;
+        
+        // delete zeroHead;
+        // delete oneHead;
+        // delete twoHead;
+        // In Java, you don’t have to manually delete objects (like in C++). Instead, Java has a feature called the garbage collector
+
+        return head;
+    }
+
+    static Node insertAtTail(Node tail, Node curr) {
+        tail.next = curr;
+        tail = curr;
+        return tail;
+    }
+}
+
+
+// _____________Simplest appraoch______________
+// class Solution {
+//     // Function to sort a linked list of 0s, 1s and 2s.
+//     static Node segregate(Node head) {
+//         Node temp=head;
+//         int zeros=0;
+//         int ones=0;
+//         int twos=0;
+//         while(temp!=null)
+//         {
+//             if(temp.data==0)
+//             {
+//                 zeros++;
+//             }
+//             else if(temp.data==1)
+//             {
+//                 ones++;
+//             }
+//             else if(temp.data==2)
+//             {
+//                 twos++;
+//             }
+//             temp=temp.next;
+//         }
+        
+//         Node temp1=head;
+//         while(temp1!=null)
+//         {
+//             if(zeros!=0)
+//             {
+//                 temp1.data=0;
+//                 zeros--;
+//             }
+//             else if(ones!=0)
+//             {
+//                 temp1.data=1;
+//                 ones--;
+//             }
+//             else if(twos!=0)
+//             {
+//                 temp1.data=2;
+//                 twos--;
+//             }
+//             temp1=temp1.next;
+//         }
+//         return head;
+//     }
+// }

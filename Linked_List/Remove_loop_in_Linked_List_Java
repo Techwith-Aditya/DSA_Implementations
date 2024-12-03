@@ -1,0 +1,98 @@
+class Solution {
+    // Function to remove a loop in the linked list.
+    public static void removeLoop(Node head) {
+        if(head==null)
+        {
+            return;
+        }
+        Node startofloop=getstartingNode(head);
+        
+        if(startofloop==null) 
+        {
+            return; 
+        }
+        
+        Node temp=startofloop;
+        
+        while(temp.next!=startofloop)
+        {
+            temp=temp.next;
+        }
+        temp.next=null;
+    }
+    
+    public static Node getstartingNode(Node head)
+    {
+        if(head==null)
+        {
+            return null;
+        }
+        Node intersection=floydDetectLoop(head);
+        
+        if(intersection==null) 
+        {
+            return null;
+        }
+        
+        Node slow=head;
+        
+        while(slow!=intersection)
+        {
+            slow=slow.next;
+            intersection=intersection.next;
+        }
+        return slow;
+    }
+    
+    public static Node floydDetectLoop(Node head)
+    {
+        if(head==null)
+        {
+            return null;
+        }
+        Node slow=head;
+        Node fast=head;
+        
+        while(fast!=null && fast.next!=null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast)
+            {
+                return slow;
+            }
+        }
+        return null;
+    }
+    
+}
+
+// ___________Simple Appaoch____________
+// class Solution {
+//     public static void removeLoop(Node head) {
+//         if(head==null) 
+//         {
+//             return;
+//         }
+
+//         HashSet<Node> visited=new HashSet<>();
+//         Node current=head;
+//         Node previous=null;
+
+//         while(current!=null) //  jaise example 2 me cycle nhi h to vha current null hoga jake...hence
+//         {
+//             // If current node is already visited, we've found the start of the loop
+//             if(visited.contains(current)) 
+//             {
+//                 previous.next=null;  // Break the loop by setting the previous node's next to null
+//                 return;
+//             }
+
+//             // Mark the current node as visited
+//             visited.add(current);
+//             previous=current;
+//             current=current.next;
+//         }
+//         return;
+//     }
+// }

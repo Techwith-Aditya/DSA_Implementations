@@ -1,0 +1,87 @@
+class Intersect {
+    int intersectPoint(Node head1, Node head2) {
+        Node temp1 = head1;
+        Node temp2 = head2;
+
+        while (temp1 != temp2) 
+        {
+            if (temp1 == null) 
+            {
+                temp1 = head2;
+            } 
+            else 
+            {
+                temp1 = temp1.next;
+            }
+
+            if (temp2 == null) 
+            {
+                temp2 = head1;
+            } 
+            else 
+            {
+                temp2 = temp2.next;
+            }
+        }
+
+        if (temp1 != null) 
+        {
+            return temp1.data;
+        } 
+        return -1;
+    }
+}
+
+//_________Simplest Approach__________
+// class Intersect {
+//     int intersectPoint(Node head1, Node head2) {
+//         Node temp1 = head1;
+//         Node temp2 = head2;
+//         int length1 = 0, length2 = 0;
+
+//         while (temp1 != null) 
+//         {
+//             length1++;
+//             temp1 = temp1.next;
+//         }
+
+//         while (temp2 != null) 
+//         {
+//             length2++;
+//             temp2 = temp2.next;
+//         }
+
+//         Node shorter;
+//         Node longer;
+//         if (length1 <= length2) 
+//         {
+//             shorter = head1;
+//             longer = head2;
+//         } 
+//         else 
+//         {
+//             shorter = head2;
+//             longer = head1;
+//         }
+
+//         HashSet<Node> nodeset = new HashSet<>();
+//         temp1 = shorter;
+//         while (temp1 != null) 
+//         {
+//             nodeset.add(temp1);
+//             temp1 = temp1.next;
+//         }
+
+//         temp2 = longer;
+//         while (temp2 != null) 
+//         {
+//             if (nodeset.contains(temp2)) 
+//             {
+//                 return temp2.data; // return the intersection node
+//             }
+//             temp2 = temp2.next;
+//         }
+
+//         return -1;
+//     }
+// }

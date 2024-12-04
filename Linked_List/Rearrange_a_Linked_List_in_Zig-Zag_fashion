@@ -1,0 +1,33 @@
+class Solution {
+    Node zigZag(Node head) {
+        Node curr=head;
+        int i=0;
+        
+        while(curr.next!=null)
+        {
+            if(i%2==0)
+            {
+                if(curr.data>=curr.next.data)
+                {
+                    swap(curr);
+                }
+                i++;
+            }
+            else
+            {
+                if(curr.data<=curr.next.data)
+                {
+                    swap(curr);
+                }
+                i++;
+            }
+            curr=curr.next;
+        }
+        return head;
+    }
+    void swap(Node node) {
+        int temp=node.data;
+        node.data=node.next.data;
+        node.next.data=temp;
+    }
+}

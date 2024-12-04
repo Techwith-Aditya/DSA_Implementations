@@ -56,6 +56,13 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Reverse_Linked_List_Java`**
 - **`Multiply_two_linked_lists_Java`**
 - **`Sort_a_linked_list_of_0s_1s_and_2s_Java`**
+- **`Flatten_a_Multilevel_Linked_List_Using_Level_Order_Traversal_Java`**
+- **`Intersection_in_Y_Shaped_Lists_Java`**
+- **`Rearrange_a_Linked_List_in_Zig-Zag_fashion`**
+- **`Remove_Nth_Node_From_End_of_List_Java`**
+- **`Remove_loop_in_Linked_List_Java`**
+- **`Reorder_List_Java`**
+- **`Reverse_a_Doubly_Linked_List_Java`**
 ---
 
 ## 🤝 Contributing

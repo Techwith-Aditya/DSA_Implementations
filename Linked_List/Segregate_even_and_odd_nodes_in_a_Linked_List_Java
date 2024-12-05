@@ -1,0 +1,117 @@
+// ________________Simplest Approach________________
+// class Solution {
+//     Node divide(Node head) {
+//         if (head == null || head.next == null) 
+//         {
+//             return head;
+//         }
+
+//         Node temp = head;
+//         ArrayList<Node> a = new ArrayList<>();
+
+//         while (temp != null) 
+//         {
+//             if (temp.data % 2 == 0) // even
+//             {
+//                 a.add(temp);
+//                 temp = temp.next;
+//             }
+//             else
+//             {
+//                 temp = temp.next;
+//             }
+//         }
+
+//         temp = head;
+//         while (temp != null) 
+//         {
+//             if (temp.data % 2 != 0) // odd
+//             {
+//                 a.add(temp);
+//                 temp = temp.next;
+//             }
+//             else
+//             {
+//                 temp = temp.next;
+//             }
+//         }
+        
+//         // .get() is the function to get value from ArrayList...
+
+//         Node newHead = a.get(0);
+//         Node current = newHead;
+
+//         for (int i = 1; i < a.size(); i++) 
+//         {
+//             current.next = a.get(i);
+//             current = current.next;
+//         }
+
+//         current.next = null;
+//         return newHead;
+//     }
+// }
+
+// ____________Optimised Approach_____________
+
+class Solution {
+    Node divide(Node head) {
+        if (head == null || head.next == null) 
+        {
+            return head;
+        }
+
+        Node evenHead = null, evenTail = null, oddHead = null, oddTail = null;
+        Node temp = head;
+
+        while (temp != null) 
+        {
+            if (temp.data % 2 == 0) 
+            {
+                if (evenHead == null) 
+                {
+                    evenHead = temp;
+                    evenTail = temp;
+                } 
+                else 
+                {
+                    evenTail.next = temp;
+                    evenTail = evenTail.next;
+                }
+            } 
+            else 
+            {
+                if (oddHead == null) 
+                {
+                    oddHead = temp;
+                    oddTail = temp;
+                } 
+                else 
+                {
+                    oddTail.next = temp;
+                    oddTail = oddTail.next;
+                }
+            }
+            temp = temp.next;
+        }
+
+        if (evenTail != null) 
+        {
+            evenTail.next = oddHead;
+        }
+        if (oddTail != null) 
+        {
+            oddTail.next = null;
+        }
+        
+        if(evenHead!=null)
+        {
+            return evenHead;
+        }
+        else
+        {
+            return oddHead;
+        }
+        // return evenHead != null ? evenHead : oddHead;
+    }
+}

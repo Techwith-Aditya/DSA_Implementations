@@ -1,0 +1,19 @@
+class Solution {
+    // Function to return a list containing the postorder traversal of the tree.
+    ArrayList<Integer> postOrder(Node root) {
+        ArrayList<Integer> a=new ArrayList<>();
+        postOrderHelper(root, a);
+        return a;
+    }
+    
+    public static void postOrderHelper(Node root, ArrayList<Integer> a) {
+        if(root==null)
+        {
+            return;
+        }
+        
+        postOrderHelper(root.left, a);
+        postOrderHelper(root.right, a);
+        a.add(root.data);
+    }
+}

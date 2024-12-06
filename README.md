@@ -65,6 +65,7 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Reverse_a_Doubly_Linked_List_Java`**
 - **`Segregate even and odd nodes in a Linked List`**
 - **`Delete nodes having greater value on right`**
+- **`Next_Greater_Node_In_Linked_List_Java`**
 ---
 
 ## 🤝 Contributing

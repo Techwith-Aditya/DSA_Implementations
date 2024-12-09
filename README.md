@@ -51,7 +51,7 @@ This folder contains solutions to frequently asked linked list problems from Lee
 
 - **`Delete_without_head_pointer_Java`**
 - **`Linked_List_Cycle_Java`**
-- **`Merge_Two _Sorted _Lists_Java`**
+- **`Merge_Two_Sorted _Lists_Java`**
 - **`Remove_Duplicates_From_An_Unsorted_Linked_List_Java`**
 - **`Reverse_Linked_List_Java`**
 - **`Multiply_two_linked_lists_Java`**
@@ -66,6 +66,10 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Segregate even and odd nodes in a Linked List`**
 - **`Delete nodes having greater value on right`**
 - **`Next_Greater_Node_In_Linked_List_Java`**
+- **`Merge_K_Sorted_Lists_Java`**
+- **`Merge_Sort_for_Linked_List_Java`**
+- **`Merge_Sort_for_Linked_List_Java`**
+- **`QuickSort_on_Singly_Linked_List_Java`**
 ---
 
 ## 🤝 Contributing

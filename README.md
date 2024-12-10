@@ -70,6 +70,9 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Merge_Sort_for_Linked_List_Java`**
 - **`Merge_Sort_for_Linked_List_Java`**
 - **`QuickSort_on_Singly_Linked_List_Java`**
+- **`Add_Number_Linked_Lists_Java`**
+- **`Clone_List_with_Next_and_Random`**
+- **`Flattening_a_Linked_List_Java`**
 ---
 
 ## 🤝 Contributing

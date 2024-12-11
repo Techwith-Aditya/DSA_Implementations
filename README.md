@@ -73,6 +73,7 @@ This folder contains solutions to frequently asked linked list problems from Lee
 - **`Add_Number_Linked_Lists_Java`**
 - **`Clone_List_with_Next_and_Random_Java`**
 - **`Flattening_a_Linked_List_Java`**
+- **`Subtraction_in_Linked_List_Java`**
 ---
 
 ## 🤝 Contributing

@@ -20,7 +20,13 @@ The project is organized into folders for better readability and navigation:
 
 ## 📘 Folders Overview
 
-### **1. Stack**
+### **1. Dynamic_Programming**
+This folder contains solutions to important and frequently asked Dynamic Programming problems.
+
+- **`Counting_Bits_Java`**
+- **`Climbing_Stairs_Java`**
+
+### **2. Stack**
 This folder contains implementations of stacks using different methods and data structures. It also includes solutions to stack-related problems.
 
 - **`Stack_By_Array_Java`**: Implements stack using an array.
@@ -36,7 +42,7 @@ This folder contains implementations of stacks using different methods and data 
 
 ---
 
-### **2. Queue**
+### **3. Queue**
 This folder provides implementations of queues using arrays, linked lists, and stacks. Also, it includes solutions of frequently asked problems of Queue.
 
 - **`CircularQueue_By_Array.java`**: Implements a circular queue using an array.
@@ -46,7 +52,7 @@ This folder provides implementations of queues using arrays, linked lists, and s
 
 ---
 
-### **3. Linked_List**
+### **4. Linked_List**
 This folder contains solutions to frequently asked linked list problems from LeetCode and GFG.
 
 - **`Delete_without_head_pointer_Java`**

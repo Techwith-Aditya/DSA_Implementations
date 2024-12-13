@@ -1,0 +1,47 @@
+__________GFG (Calculate the number of ways to make up the given sum using the coins)_________
+class Solution {
+    public int count(int coins[], int sum) {
+        int n = coins.length;
+        int[] dp = new int[sum + 1];
+
+        // There's one way to make sum 0 (use no coins)
+        dp[0] = 1;
+        for (int i = 0; i < n; i++) 
+        {
+            int coin = coins[i];
+            for (int j = coin; j <= sum; j++) 
+            {
+                dp[j] = dp[j] + dp[j - coin];
+            }
+        }
+        return dp[sum];
+    }
+}
+
+__________Leetcode (Calculate the minimum number of coins required to make up a given amount)_________
+class Solution {
+    public int change(int[] coins, int n, int sum) {
+        int[] dp = new int[sum + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+
+        for (int i = 0; i < n; i++) 
+        {
+            int temp = coins[i];
+            for (int j = temp; j <= sum; j++) 
+            {
+                if (dp[j - temp] != Integer.MAX_VALUE) 
+                {
+                    dp[j] = Math.min(dp[j], dp[j - temp] + 1);
+                }
+            }
+        }
+
+        return dp[sum] == Integer.MAX_VALUE ? -1 : dp[sum];
+    }
+
+    public int coinChange(int[] coins, int amount) {
+        int n = coins.length;
+        return change(coins, n, amount);
+    }
+}

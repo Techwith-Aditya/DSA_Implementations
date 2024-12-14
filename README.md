@@ -51,6 +51,7 @@ This folder provides implementations of queues using arrays, linked lists, and s
 - **`Queue_By_Array.java`**: Implements a basic queue using an array.
 - **`Queue_By_LinkedList_Java.java`**: Implements a queue using a linked list.
 - **`Queue_By_Stack_Java.java`**: Implements a queue using stacks.
+- **`Queue_Reversal_Java`**
 
 ---
 

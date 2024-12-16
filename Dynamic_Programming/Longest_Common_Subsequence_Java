@@ -1,0 +1,41 @@
+// ____________________Memoisation___________________
+class Solution {
+    public int longestCommonSubsequence(String text1, String text2) {
+        int m = text1.length();
+        int n = text2.length();
+        int[][] memo = new int[m + 1][n + 1];
+        
+        // Memorization table ko initialise kra equal to -1
+        for (int i = 0; i <= m; i++) 
+        {
+            for (int j = 0; j <= n; j++) 
+            {
+                memo[i][j] = -1;
+            }
+        }
+        
+        return lcs(text1.toCharArray(), text2.toCharArray(), m, n, memo);
+    }
+
+    private int lcs(char[] x, char[] y, int m, int n, int[][] memo) {
+        if (m == 0 || n == 0) 
+        {
+            return 0;
+        } 
+        else if (memo[m][n] != -1) 
+        {
+            return memo[m][n];
+        }
+        
+        else if (x[m - 1] == y[n - 1]) 
+        {
+            memo[m][n] = 1 + lcs(x, y, m - 1, n - 1, memo);
+        } 
+        else 
+        {
+            memo[m][n] = Math.max(lcs(x, y, m - 1, n, memo), lcs(x, y, m, n - 1, memo));
+        }
+        
+        return memo[m][n];
+    }
+}

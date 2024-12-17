@@ -1,0 +1,51 @@
+class Solution {
+    int[][] dp;
+    public int superEggDrop(int k, int n) {
+        dp = new int[k + 1][n + 1];  
+        for (int i = 0; i <= k; i++) 
+        {
+            for (int j = 0; j <= n; j++) 
+            {
+                dp[i][j] = -1;
+            }
+        }
+        return rec(k, n);
+    }
+
+    public int rec(int k, int n) {
+        if (k == 1 || n == 0 || n == 1) 
+        {
+            return n;
+        }
+
+        if (dp[k][n] != -1) 
+        {
+            return dp[k][n];
+        }
+
+        int low = 1, high = n, ans = Integer.MAX_VALUE;
+        
+        // Binary search
+        while (low <= high) 
+        {
+            int mid = (low + high) / 2;
+            int breaks = rec(k - 1, mid - 1); // Egg breaks (mid se neeche aa gye)
+            int notbreaks = rec(k, n - mid); // Egg doesn't break (mid se upr chle gye)
+            int worst = 1 + Math.max(breaks, notbreaks); // Worst case of the two
+
+            ans = Math.min(ans, worst);
+            
+            if (breaks > notbreaks) 
+            {
+                high = mid - 1; // Egg breaks, try lower floors
+            } 
+            else 
+            {
+                low = mid + 1; // Egg doesn't break, try higher floors
+            }
+        }
+
+        dp[k][n] = ans;
+        return ans;
+    }
+}

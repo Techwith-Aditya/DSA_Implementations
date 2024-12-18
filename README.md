@@ -32,6 +32,7 @@ This folder contains solutions to important and frequently asked Dynamic Program
 - **`N-th_Tribonacci_Number_Java`**
 - **`Longest_Common_Subsequence_Java`**
 - **`Super_Egg_drop_Java`**
+- **`Min_Cost_Climbing_Stairs_Java`**
 
 ### **2. Stack**
 This folder contains implementations of stacks using different methods and data structures. It also includes solutions to stack-related problems.

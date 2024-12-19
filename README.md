@@ -33,6 +33,7 @@ This folder contains solutions to important and frequently asked Dynamic Program
 - **`Longest_Common_Subsequence_Java`**
 - **`Super_Egg_drop_Java`**
 - **`Min_Cost_Climbing_Stairs_Java`**
+- **`2_Keys_Keyboard_Java`**
 
 ### **2. Stack**
 This folder contains implementations of stacks using different methods and data structures. It also includes solutions to stack-related problems.
